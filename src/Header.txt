@@ -1,9 +1,9 @@
 /*
  * EE422C Project 2 (Mastermind) submission by
- * Replace <...> with your actual data. 
- * <Student Name>
- * <Student EID>
+ *
+ * Jesus Hernandez
+ * Jh69848
  * Slip days used: <0>
- * Summer 2020
+ * Spring 2023
  */
 package assignment2;

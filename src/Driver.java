@@ -1,8 +1,11 @@
 /*
- * Mastermind
- * Jan 20, 2020
+ * EE422C Project 2 (Mastermind) submission by
+ *
+ * Jesus Hernandez
+ * Jh69848
+ * Slip days used: <0>
+ * Spring 2023
  */
-
 import java.util.Scanner;
 
 public class Driver {
