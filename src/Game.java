@@ -8,6 +8,7 @@ public class Game {
         if (test == true){
             System.out.println("Secret code: " + secretCode);
         }
+        Player player = new Player(config);
         System.out.println("game ran");
     }
 
