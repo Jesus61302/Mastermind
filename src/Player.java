@@ -15,6 +15,10 @@ public class Player {
         this.guess = guess + " -> " + pegs;
 
     }
+    public void setGuess(String guess){
+        this.guess = guess;
+
+    }
     public String getGuess(){
         return this.guess;
     }
@@ -23,7 +27,11 @@ public class Player {
         history[turns] = this.guess;
     }
     public void printHistory(){
-        Arrays.toString(history);
+        for(String g : history){
+            if(g != null){
+                System.out.println(g);
+            }
+        }
     }
 
 }

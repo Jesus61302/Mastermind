@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 public class Game {
@@ -14,32 +15,57 @@ public class Game {
         int guessLeft = config.guessNumber;
         String guess;
         String pegs;
-        while (guessLeft > 1){
+        Boolean gameWon = false;
+        while (player.turns < config.guessNumber){
             System.out.println();
             guessLeft = config.guessNumber - player.turns;
             System.out.println("You have " + guessLeft + " guess(es)left.");
             System.out.println("Enter Guess:");
             guess = new String(consol.next());
+            Boolean invalid = false;
+            Boolean history = false;
             if(guess.equals("HISTORY")){
-                player.printHistory();
+                history = true;
             }
             else if (guess.length() != config.pegNumber){
+                invalid = true;
+            }
+            else if(true){
+                List colors = Arrays.asList(config.colors);
+                for (int i = 0; i < guess.length();i++){
+                    if(colors.contains(Character.toString(guess.charAt(i))) == false){
+                        invalid = true;
+                    }
+
+                }
+
+            }
+            if (invalid){
                 System.out.println("INVALID_GUESS");
             }
+            else if (history){
+                player.printHistory();
+            }
             else{
-                for (int i = 0; i < guess.length();i++){
-                    if(Character.isUpperCase(guess.charAt(i))){
-                        System.out.println("INVALID_GUESS");
-                        break;
-                    }
+                pegs = Peg.returnPegs(config.pegNumber, guess, secretCode);
+                player.setGuess(guess,pegs);
+                player.updateHistory();
+                System.out.println(player.getGuess());
+                player.turns++;
+                if(pegs.equals("4b_0w")){
+                    player.turns = config.guessNumber;
+                    gameWon = true;
                 }
             }
-            pegs = Peg.returnPegs(config.pegNumber, guess, secretCode);
-            player.setGuess(guess,pegs);
-            player.updateHistory();
-            System.out.println(player.getGuess());
-            player.turns++;
+
         }
+        if(gameWon){
+            System.out.println("You win!");
+        }
+        else{
+            System.out.println("You lose! The pattern was " + secretCode);
+        }
+        System.out.println();
 
     }
 

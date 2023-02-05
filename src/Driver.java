@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Driver {
     public static void main(String[] args) {
-        Boolean isTesting = true;
+        Boolean isTesting = false;
         String [] colors = {"R","Y","B","G","P","O"};
         GameConfiguration config = new GameConfiguration(12, colors , 4);
         SecretCodeGenerator generator = new SecretCodeGenerator(config);
@@ -21,7 +21,7 @@ public class Driver {
         Scanner console = new Scanner(System.in);
         Game Mastermind = new Game(isTesting);
         String play = new String("Y");
-        System.out.println("Welcome to MasterMind");
+        System.out.println("Welcome to MasterMind.");
         while (play.equals("Y")){
             System.out.println("Do you want to play a new game? (Y/N):");
             play = new String(console.next());
@@ -31,6 +31,7 @@ public class Driver {
             String code = new String(generator.getNewSecretCode());
             Mastermind.runGame(code, config, console);
         }
+        System.out.println();
 
     }
 }
