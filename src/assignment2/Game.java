@@ -6,6 +6,7 @@
  * Slip days used: <0>
  * Spring 2023
  */
+package assignment2;
 import java.util.*;
 
 public class Game {
@@ -59,7 +60,7 @@ public class Game {
                 player.updateHistory();
                 System.out.println(player.getGuess());
                 player.turns++;
-                if(pegs.equals("4b_0w")){
+                if(pegs.equals(config.pegNumber + "b_0w")){
                     player.turns = config.guessNumber;
                     gameWon = true;
                 }

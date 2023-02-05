@@ -6,6 +6,7 @@
  * Slip days used: <0>
  * Spring 2023
  */
+package assignment2;
 import java.util.*;
 
 public class Color {

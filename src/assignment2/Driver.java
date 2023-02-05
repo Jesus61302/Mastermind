@@ -6,11 +6,12 @@
  * Slip days used: <0>
  * Spring 2023
  */
+package assignment2;
 import java.util.Scanner;
 
 public class Driver {
     public static void main(String[] args) {
-        Boolean isTesting = false;
+        Boolean isTesting = true;
         String [] colors = {"R","Y","B","G","P","O"};
         GameConfiguration config = new GameConfiguration(12, colors , 4);
         SecretCodeGenerator generator = new SecretCodeGenerator(config);

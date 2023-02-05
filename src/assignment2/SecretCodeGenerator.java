@@ -1,5 +1,5 @@
 /* If you submit this file, it will be ignored. Do not modify. */
-
+package assignment2;
 import java.util.Random;
 
 public class SecretCodeGenerator {
