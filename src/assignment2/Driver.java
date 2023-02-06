@@ -22,7 +22,7 @@ public class Driver {
         Scanner console = new Scanner(System.in);
         Game Mastermind = new Game(isTesting);
         String play = new String("Y");
-        System.out.println("Welcome to MasterMind.");
+        System.out.println("Welcome to Mastermind.");
         while (play.equals("Y")){
             System.out.println("Do you want to play a new game? (Y/N):");
             play = new String(console.next());
