@@ -11,4 +11,5 @@ public class ColorTest {
         String code = "RBYO";
         Color[] code1 = Color.toSet(code);
     }
+
 }

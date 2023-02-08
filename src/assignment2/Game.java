@@ -27,7 +27,7 @@ public class Game {
         while (player.turns < config.guessNumber){
             System.out.println();
             guessLeft = config.guessNumber - player.turns;
-            System.out.println("You have " + guessLeft + " guess(es)left.");
+            System.out.println("You have " + guessLeft + " guess(es) left.");
             System.out.println("Enter guess:");
             guess = new String(consol.next());
             Boolean invalid = false;
